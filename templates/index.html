@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Input datas</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+
+      <h1 >
+         Please fill in your inputs
+
+      </h1>
+      <br>
+      <form action = "/result" method = "POST">
+        <p>Retour de Résultat <input type = "text" name = "input_text" style="font-size:18pt;height:120px;width:200px;"/></p>
+        <p><input type = "submit" value = "GO" /></p>
+      </form>
+      <form action = "/prediction" method = "POST">
+        <p>Retour de prédiction <input type = "text" name = "input_text" style="font-size:18pt;height:120px;width:200px;"/></p>
+        <p><input type = "submit" value = "GO" /></p>
+      </form>
+
+      <button><a href="entrainement">Cliquez Ici pour visualiser les metrics</a></button>
+      
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+
+
+  </body>
+</html>
